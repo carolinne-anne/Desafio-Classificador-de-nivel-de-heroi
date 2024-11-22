@@ -1,24 +1,31 @@
-let nome = "Anne";
-let xp = 7550;
+let nome = "ANNE";
+let xp = 7005;
 
 let nivel;
 
 if (xp < 1000) {
-    nivel = "Ferro";
+    nivel = "FERRO!";
 } else if (xp <= 2000) {
-    nivel = "Bronze";
+    nivel = "BRONZE!";
 } else if (xp <= 5000) {
-    nivel = "Prata";
+    nivel = "PRATA!";
 } else if (xp <= 7000) {
-    nivel = "Ouro";
+    nivel = "OURO!";
 } else if (xp <= 8000) {
-    nivel = "Platina";
+    nivel = "PLATINA!";
 } else if (xp <= 9000) {
-    nivel = "Ascendente";
+    nivel = "ASCENDENTE!";
 } else if (xp <= 10000) {
-    nivel = "Imortal";
+    nivel = "IMORTAL!";
 } else {
-    nivel = "Radiante";
+    nivel = "RADIANTE!";
 }
 
-console.log(`O Herói de nome ${nome} está no nível ${nivel}`);
+const mensagem = (`O Herói de nome ${nome} está no nível ${nivel}`);
+
+console.log(mensagem);
+
+const body = document.querySelector("body");
+const paragrafo = document.createElement("p");
+paragrafo.textContent = mensagem;
+body.appendChild(paragrafo);
